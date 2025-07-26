@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VRBO vs. Small Hosts: The Hidden Cost of Corporate Policies</title>
+
+<!-- Bootstrap & Animate CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+
+<!-- Custom Styles -->
+<style>
+body {
+  font-family: 'Raleway', sans-serif; background: #fff; color: #222;
+  line-height: 1.6; margin: 0;
+}
+h1, h2 {
+  font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 1px;
+}
+a {
+  text-decoration: none; transition: all 0.3s ease;
+}
+a:hover {
+  color: #007bff; text-decoration: underline;
+}
+
+/* Header Hero */
+.hero {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff; padding: 140px 20px; text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: 3.5rem; margin-bottom: 20px; animation: fadeInDown 1s ease;
+}
+.hero p.lead {
+  font-size: 1.3rem; max-width: 800px; margin: 0 auto 30px; line-height: 1.5; opacity: 0.9;
+}
+.btn-cta {
+  margin-top: 20px; font-size: 1.25rem;
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px; position: relative; opacity: 0; transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+.section.visible { opacity: 1; transform: translateY(0); }
+.section:nth-child(even) { background: #f9f9f9; }
+
+h2 {
+  font-size: 2.4rem; margin-bottom: 30px; text-align: center;
+  position: relative;
+}
+h2::after {
+  content: "";
+  display: block; width: 60px; height: 3px; background: #2a5298; margin: 10px auto 0; border-radius: 2px;
+}
+
+/* Timeline styles */
+.timeline {
+  list-style: none; padding: 0;
+}
+.timeline li {
+  position: relative; padding: 15px 0 15px 40px; margin-left: 20px;
+}
+.timeline li::before {
+  content: "";
+  position: absolute; left: 0; top: 25px;
+  width: 14px; height: 14px; background: #2a5298; border-radius: 50%;
+}
+.timeline li::after {
+  content: "";
+  position: absolute; left: 7px; top: 37px; width: 0; height: 100%; border-left: 2px dashed #2a5298; height: calc(100% - 37px);
+}
+
+/* Evidence imgs */
+.evidence-img {
+  width: 100%; max-width: 500px; margin: 15px auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.evidence-img:hover {
+  transform: scale(1.03); box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Call-to-Action */
+.cta {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff; text-align: center; padding: 100px 20px;
+}
+.btn-cta {
+  margin: 15px; font-size: 1.4rem; padding: 15px 30px; font-weight: 700; border-radius: 50px;
+}
+.btn-cta:hover {
+  background: #fff; color: #2a5298; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero animate__animated animate__fadeInDown">
+  <div class="container">
+    <h1>VRBO’s Hidden Cost: The Power Play Against Small Hosts</h1>
+    <p class="lead">Discover how a quick cancellation turned into a $336 penalty. Small hosts vs. corporate giants — it’s time to unveil the truth.</p>
+    <a href="#story" class="btn btn-light btn-lg btn-cta">Read Full Story</a>
+  </div>
+</section>
+
+<!-- Story Section -->
+<section id="story" class="section animate__animated animate__fadeInUp" style="transition-delay: 0.2s;">
+  <div class="container">
+    <h2>The Full Story: Cancel, Penalty, and Hidden Rules</h2>
+    <p class="lead text-center">In December 2024, I swiftly canceled a booking after a guest admitted to sneaking in 3 dogs — all within an hour. VRBO responded with a $336.41 invoice — sealed, no mercy, no room for appeal.</p>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <p><strong>Dec 7, 2024:</strong> Guest books, admits to 3 dogs. I cancel within 60 mins.</p>
+        <p><strong>Jan 7, 2025:</strong> VRBO sends invoice demanding $336.41, past due.</p>
+        <p><strong>After repeated appeals:</strong> Denied, citing a missed 30-day window.</p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>My Reaction:</strong> Outrage. Small hosts get robbed under the guise of policies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="section animate__animated animate__fadeInUp" style="transition-delay: 0.3s;">
+  <div class="container">
+    <h2>Timeline of Events</h2>
+    <ul class="timeline mx-auto" style="max-width:700px;">
+      <li><strong>Dec 7, 2024 (4:45 PM):</strong> Guest books and admits to violations.</li>
+      <li><strong>Dec 7, 2024 (5:04 PM):</strong> My quick cancel — refund issued.</li>
+      <li><strong>Jan 7, 2025:</strong> VRBO invoice arrives.</li>
+      <li><strong>Jul 25, 2025:</strong> Denial of waiver after multiple appeals.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Evidence Section -->
+<section class="section bg-light animate__animated animate__fadeIn" style="transition-delay: 0.4s;">
+  <div class="container">
+    <h2 class="text-center mb-5">Proof & Screenshots</h2>
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-6 text-center">
+        <img src="path-to-your-screenshot-of-chat.png" alt="Guest admitting to dogs" class="evidence-img" />
+        <p class="mt-2">Chat showing guest's admission and my swift cancellation.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="path-to-your-invoice-email.png" alt="VRBO invoice" class="evidence-img" />
+        <p class="mt-2">VRBO invoice demanding $336.41 for cancellation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Disgruntled Stories -->
+<section class="section animate__animated animate__fadeIn" style="transition-delay: 0.5s;">
+  <div class="container">
+    <h2 class="text-center mb-5">Others Voice Out</h2>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><a href="https://www.reddit.com/r/vrbo/comments/1m2mf5d/vrbo_is_trying_to_charge_me_host_5984_for_a/" target="_blank">Reddit: Host hit with $5984 fee</a></li>
+      <li class="list-group-item"><a href="https://www.bbb.org/us/wa/seattle/profile/travel-agency/vrbo-1296-1000180138/complaints" target="_blank">BBB: Multiple complaints</a></li>
+      <li class="list-group-item"><a href="https://www.reddit.com/r/vrbo/comments/17hd2wd/vrbos_unjust_policies_sacrificing_hosts_for/" target="_blank">Reddit: Unfair policies & exploitation</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta animate__animated animate__fadeIn" style="background: linear-gradient(135deg, #1e3c72, #2a5298);">
+  <div class="container">
+    <h2>Join the Fight Against Corporate Bullying</h2>
+    <p class="lead mb-4">Small hosts stand together. Share your story, push for change, demand fairness.</p>
+    <a href="https://twitter.com/intent/tweet?text=VRBO+charged+a+host+%24336+for+cancelling+with+quick+proof!+Unfair!+Check+my+story:+https://robbedbyvrbo.surge.sh&hashtags=VRBOUnfair,HostRights" class="btn btn-light btn-xl btn-cta">Tweet Your Support</a>
+    <a href="https://facebook.com/sharer/sharer.php?u=https://robbedbyvrbo.surge.sh" class="btn btn-light btn-xl btn-cta">Share on Facebook</a>
+    <a href="https://www.reddit.com/submit?url=https://robbedbyvrbo.surge.sh&title=My+VRBO+Host+Story" class="btn btn-light btn-xl btn-cta">Post on Reddit</a>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+<script>
+  // Animate on scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(sec => observer.observe(sec));
+  });
+</script>
+
+</body>
+</html>

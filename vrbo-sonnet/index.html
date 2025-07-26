@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VRBO vs. Small Hosts: The Hidden Cost of Corporate Policies</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.btn-hero {
+  background: white;
+  color: #3b82f6;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  color: #1d4ed8;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+
+.section-alt {
+  background: #f8fafc;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Cards */
+.story-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #e5e7eb;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, #fef3c7, #fed7aa);
+  border-left: 5px solid #f59e0b;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.danger-box {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border-left: 5px solid #dc2626;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+/* Timeline */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #3b82f6;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 2rem 0;
+  width: 45%;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 55%;
+  text-align: left;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background: #3b82f6;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #3b82f6;
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -12px;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -12px;
+}
+
+.timeline-date {
+  font-weight: 600;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+/* Evidence */
+.evidence-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.evidence-card:hover {
+  transform: translateY(-5px);
+}
+
+.evidence-placeholder {
+  height: 200px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 3rem;
+}
+
+.evidence-content {
+  padding: 1.5rem;
+}
+
+/* Links */
+.link-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.link-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  color: #1f2937;
+}
+
+.link-card i {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.btn-social {
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+  background: white;
+  color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    width: calc(100% - 50px);
+    left: 40px !important;
+    text-align: left !important;
+  }
+  
+  .timeline-item::before {
+    left: -32px !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1><i class="fas fa-home"></i> VRBO's Hidden Cost</h1>
+    <p class="lead">How a swift cancellation became a $336 corporate penalty</p>
+    <a href="#story" class="btn-hero">
+      <i class="fas fa-book-open"></i> Read My Story
+    </a>
+  </div>
+</section>
+
+<!-- Story -->
+<section id="story" class="section">
+  <div class="container">
+    <h2>The Full Story</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="story-card">
+          <p class="lead text-center mb-4">In December 2024, I swiftly canceled a booking after a guest admitted to sneaking in 3 dogs — all within an hour. VRBO responded with a $336.41 invoice.</p>
+          
+          <div class="highlight-box">
+            <h4><i class="fas fa-exclamation-triangle"></i> What Happened</h4>
+            <ul class="list-unstyled">
+              <li><strong>Dec 7, 2024 4:45 PM:</strong> Guest books and admits to 3 unauthorized dogs</li>
+              <li><strong>Dec 7, 2024 5:04 PM:</strong> I cancel within 1 hour, issue full refund</li>
+              <li><strong>Jan 7, 2025:</strong> VRBO sends $336.41 invoice marked "past due"</li>
+              <li><strong>Multiple Appeals:</strong> All denied citing "missed 30-day window"</li>
+            </ul>
+          </div>
+          
+          <div class="danger-box">
+            <h4><i class="fas fa-times-circle"></i> The Corporate Response</h4>
+            <p>Despite clear evidence of guest policy violations and my swift action, VRBO refused to waive the fee. Their message was clear: small hosts are expendable in their corporate machine.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="section section-alt">
+  <div class="container">
+    <h2>Timeline of Events</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 7, 2024 - 4:45 PM</div>
+        <h5>Guest Books Property</h5>
+        <p>Guest admits to bringing 3 dogs despite no-pet policy</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 7, 2024 - 5:04 PM</div>
+        <h5>Swift Cancellation</h5>
+        <p>I cancel booking within 19 minutes, issue full refund</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 7, 2025</div>
+        <h5>VRBO Invoice Arrives</h5>
+        <p>$336.41 demand marked as "past due"</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 2025 - Present</div>
+        <h5>Appeals Denied</h5>
+        <p>Multiple waiver requests rejected</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Evidence -->
+<section class="section">
+  <div class="container">
+    <h2>Evidence & Proof</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="evidence-card">
+          <div class="evidence-placeholder">
+            <i class="fas fa-comments"></i>
+          </div>
+          <div class="evidence-content">
+            <h5>Guest Chat Logs</h5>
+            <p>Screenshots showing guest admission of policy violations and my immediate response.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="evidence-card">
+          <div class="evidence-placeholder">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <div class="evidence-content">
+            <h5>VRBO Invoice</h5>
+            <p>The $336.41 demand notice and subsequent denial letters from VRBO support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Community Stories -->
+<section class="section section-alt">
+  <div class="container">
+    <h2>You're Not Alone</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <a href="https://www.reddit.com/r/vrbo/comments/1m2mf5d/vrbo_is_trying_to_charge_me_host_5984_for_a/" target="_blank" class="link-card">
+          <i class="fab fa-reddit"></i>
+          <h5>Host Charged $5,984</h5>
+          <p>Similar unfair penalty story</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="https://www.bbb.org/us/wa/seattle/profile/travel-agency/vrbo-1296-1000180138/complaints" target="_blank" class="link-card">
+          <i class="fas fa-exclamation-triangle"></i>
+          <h5>BBB Complaints</h5>
+          <p>Hundreds of similar cases</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="https://www.reddit.com/r/vrbo/comments/17hd2wd/vrbos_unjust_policies_sacrificing_hosts_for/" target="_blank" class="link-card">
+          <i class="fas fa-balance-scale"></i>
+          <h5>Unjust Policies</h5>
+          <p>Host exploitation discussion</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Join the Fight for Host Rights</h2>
+    <p class="lead mb-4">Share this story. Demand change. Protect small hosts.</p>
+    
+    <div class="social-buttons">
+      <a href="https://twitter.com/intent/tweet?text=VRBO%20charged%20a%20host%20%24336%20for%20cancelling%20within%201%20hour%20due%20to%20guest%20violations!%20This%20is%20corporate%20bullying.%20Read%20the%20story:%20https://vrbo-sonnet.surge.sh&hashtags=VRBOUnfair,HostRights" class="btn-social" target="_blank">
+        <i class="fab fa-twitter"></i> Tweet This Story
+      </a>
+      <a href="https://facebook.com/sharer/sharer.php?u=https://vrbo
