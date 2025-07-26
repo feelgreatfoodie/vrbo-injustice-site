@@ -50,14 +50,14 @@ This website tells the story of how VRBO charged a small host $336.41 for cancel
    cd vrbo-injustice-site
    ```
 
-🎨 Design Highlights
+## 🎨 Design Highlights
 
 Mobile-First Approach: Optimized for mobile viewing with desktop enhancements
 Accessibility: WCAG compliant with proper contrast ratios and focus states
 Performance: Optimized loading with lazy loading and efficient animations
 Modern UI: Clean design with subtle animations and professional typography
 
-📈 Performance Features
+## 📈 Performance Features
 
 Lazy loading for images and animations
 Optimized CSS with efficient selectors
