@@ -2539,3 +2539,224 @@ a:hover {
     text-shadow: none !important;
   }
 }
+/* ================================
+   CRITICAL CONTRAST FIXES FOR SECTION HEADERS
+   ================================ */
+
+/* Evidence section - force white text on dark background */
+#evidence {
+  background: #2d3748 !important; /* Ensure dark background */
+}
+
+#evidence .section-title {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5) !important;
+  font-size: 3rem !important;
+}
+
+#evidence .section-subtitle {
+  color: #f7fafc !important;
+  font-weight: 600 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) !important;
+  font-size: 1.3rem !important;
+  opacity: 1 !important;
+}
+
+/* Community section - force dark text on light background */
+#community {
+  background: #f7fafc !important; /* Ensure light background */
+}
+
+#community .section-title {
+  color: #1a202c !important;
+  font-weight: 800 !important;
+  text-shadow: none !important;
+  font-size: 3rem !important;
+}
+
+#community .section-subtitle {
+  color: #2d3748 !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  font-size: 1.3rem !important;
+  opacity: 1 !important;
+}
+
+/* Timeline section - force white text on dark background */
+#timeline {
+  background: linear-gradient(135deg, #2d3748, #1a202c) !important;
+}
+
+#timeline .section-title {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6) !important;
+  font-size: 3rem !important;
+}
+
+#timeline .section-subtitle {
+  color: #f7fafc !important;
+  font-weight: 600 !important;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5) !important;
+  font-size: 1.3rem !important;
+  opacity: 1 !important;
+}
+
+/* Action/CTA section - force white text */
+#action {
+  background: linear-gradient(135deg, #3182ce, #2c5aa0) !important;
+}
+
+#action .section-title {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6) !important;
+  font-size: 3rem !important;
+}
+
+#action .lead {
+  color: #f7fafc !important;
+  font-weight: 600 !important;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4) !important;
+  font-size: 1.3rem !important;
+  opacity: 1 !important;
+}
+
+/* Social sharing buttons - better contrast */
+.btn-social {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #2d3748 !important;
+  border: 2px solid rgba(255, 255, 255, 0.9) !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+.btn-social:hover {
+  background: #ffffff !important;
+  color: #1a202c !important;
+  border-color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+  #evidence .section-title,
+  #timeline .section-title,
+  #action .section-title {
+    font-size: 2.2rem !important;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  #evidence .section-subtitle,
+  #timeline .section-subtitle,
+  #action .lead {
+    font-size: 1.1rem !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  #community .section-title {
+    font-size: 2.2rem !important;
+    color: #1a202c !important;
+  }
+
+  #community .section-subtitle {
+    font-size: 1.1rem !important;
+    color: #2d3748 !important;
+  }
+}
+
+/* Override any conflicting styles */
+.section-dark .section-title,
+.section-cta .section-title {
+  color: #ffffff !important;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+.section-dark .section-subtitle,
+.section-cta .lead,
+.section-cta .section-subtitle {
+  color: #f7fafc !important;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Ensure light sections have dark text */
+.section-alt .section-title,
+.section:not(.section-dark):not(.section-cta) .section-title {
+  color: #1a202c !important;
+  text-shadow: none !important;
+}
+
+.section-alt .section-subtitle,
+.section:not(.section-dark):not(.section-cta) .section-subtitle {
+  color: #2d3748 !important;
+  text-shadow: none !important;
+}
+/* ================================
+   FIX FOR "THE COMPLETE STORY" SECTION
+   ================================ */
+
+/* Story section - force light background and dark text */
+#story {
+  background: #ffffff !important; /* Pure white background */
+}
+
+#story .section-title {
+  color: #1a202c !important;
+  font-weight: 800 !important;
+  text-shadow: none !important;
+  font-size: 3rem !important;
+}
+
+#story .section-subtitle {
+  color: #2d3748 !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+  font-size: 1.3rem !important;
+  opacity: 1 !important;
+}
+
+/* Make sure story content is also readable */
+#story .story-content {
+  background: #ffffff !important;
+  color: #1a202c !important;
+}
+
+#story .story-content p,
+#story .story-content .lead {
+  color: #1a202c !important;
+  font-weight: 600 !important;
+}
+
+/* Mobile fixes for story section */
+@media (max-width: 768px) {
+  #story .section-title {
+    font-size: 2.2rem !important;
+    color: #1a202c !important;
+    text-shadow: none !important;
+  }
+
+  #story .section-subtitle {
+    font-size: 1.1rem !important;
+    color: #2d3748 !important;
+    text-shadow: none !important;
+  }
+}
+
+/* Ensure story section is always light theme */
+.section#story {
+  background: #ffffff !important;
+}
+
+.section#story .section-header {
+  background: transparent !important;
+}
+
+.section#story .section-title::after {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--accent-color)
+  ) !important;
+}
