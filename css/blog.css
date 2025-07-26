@@ -1,0 +1,108 @@
+/* Blog-specific styles */
+.blog-main {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.blog-article {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.blog-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.blog-breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.blog-breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+.blog-meta span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.blog-content {
+    padding: 3rem;
+    line-height: 1.7;
+}
+
+.blog-intro {
+    font-size: 1.2rem;
+    font-style: italic;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    padding: 2rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.blog-footer {
+    background: #f8fafc;
+    padding: 2rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.blog-share {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.blog-navigation {
+    text-align: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 1.8rem;
+    }
+    
+    .blog-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .blog-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }

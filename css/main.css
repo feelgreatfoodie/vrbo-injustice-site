@@ -2760,3 +2760,69 @@ a:hover {
     var(--accent-color)
   ) !important;
 }
+
+/* Blog Preview Styling */
+.blog-preview-card {
+  background: white;
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.blog-preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.blog-preview-content {
+  padding: 3rem;
+}
+
+.blog-preview-title {
+  font-size: 1.8rem !important;
+  color: #1a202c !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.blog-preview-excerpt {
+  color: #374151 !important;
+  font-weight: 500 !important;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.blog-preview-meta {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.9rem;
+  color: #6b7280 !important;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.blog-preview-actions {
+  text-align: center;
+}
+
+.quick-facts {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.fact-item {
+  font-size: 0.9rem;
+  color: #6b7280 !important;
+  font-weight: 600;
+}
+
+.fact-item strong {
+  color: var(--primary-color) !important;
+  font-size: 1.1rem;
+}
