@@ -756,8 +756,8 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
-.btn-twitter:hover {
-  color: #1da1f2;
+.btn-x:hover {
+  color: #000000;
 }
 .btn-facebook:hover {
   color: #4267b2;
@@ -2825,4 +2825,157 @@ a:hover {
 .fact-item strong {
   color: var(--primary-color) !important;
   font-size: 1.1rem;
+}
+/* Add Reddit button styling */
+.btn-reddit {
+  background: #ff4500 !important;
+  color: white !important;
+  border: 2px solid #ff4500;
+}
+
+.btn-reddit:hover {
+  background: white !important;
+  color: #ff4500 !important;
+  border-color: #ff4500 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+}
+/* ================================
+   IMPROVED ACTION SECTION LAYOUT
+   ================================ */
+
+.social-share-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+/* Social button improvements */
+.btn-social {
+  padding: 1rem 2rem !important;
+  font-weight: 600 !important;
+  border-radius: 50px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 2px solid transparent !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  color: white !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  min-width: 180px !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-x {
+  background: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.btn-x:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-facebook {
+  background: #1877f2 !important;
+  border-color: #1877f2 !important;
+}
+
+.btn-facebook:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1877f2 !important;
+  border-color: #1877f2 !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 8px 25px rgba(24, 119, 242, 0.2) !important;
+}
+
+.btn-reddit {
+  background: #ff4500 !important;
+  border-color: #ff4500 !important;
+}
+
+.btn-reddit:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #ff4500 !important;
+  border-color: #ff4500 !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 8px 25px rgba(255, 69, 0, 0.2) !important;
+}
+
+/* Additional actions styling */
+.additional-actions {
+  position: relative;
+  z-index: 1;
+  margin-top: 3rem;
+}
+
+.additional-actions .row .btn {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  border-radius: 50px !important;
+  padding: 1rem 1.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.additional-actions .row .btn:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: var(--primary-color) !important;
+  border-color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .social-share-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-social {
+    width: 100% !important;
+    max-width: 280px !important;
+    min-width: auto !important;
+  }
+
+  .additional-actions .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .additional-actions .col-md-6 {
+    width: 100%;
+  }
+
+  .additional-actions .btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Desktop layout - horizontal */
+@media (min-width: 769px) {
+  .social-share-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .btn-social {
+    flex: 0 0 auto;
+    width: auto !important;
+  }
 }

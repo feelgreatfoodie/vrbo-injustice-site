@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vrbo.surge.sh/sitemap.xml
+
+# Block any admin or private directories if you add them later
+Disallow: /admin/
+Disallow: /private/
